@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <script src="vss-init-index.js"></script>
+    <script type="text/javascript">
+        initializeWidgetConfiguration('WorkPerDayConfiguration', 'widgets-work-per-day-configuration');
+    </script>
+    <style>
+        .margin-bottom { 
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="widget-configuration">
+        <div class="single-line-text-input margin-bottom">
+            <label>Title</label>
+            <input id="title" type="text"></input>
+        </div>
+
+        <div class="dropdown margin-bottom">
+            <label>Source</label>
+            <div class="wrapper">
+                <select id="source">
+                    <option value="iteration">Iteration</option>
+                    <option value="query">Query</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="dropdown margin-bottom" id="team-area">
+            <label>Team</label>
+            <div class="wrapper">
+                <select id="team">
+                </select>
+            </div>
+        </div>
+
+        <div class="dropdown margin-bottom" id="iteration-area">
+            <label>Iteration</label>
+            <div class="wrapper">
+                <select id="iteration">
+                </select>
+            </div>
+        </div>
+
+        <div class="dropdown margin-bottom" id="query-area">
+            <label>Query</label>
+            <div class="wrapper">
+                <select id="query">
+                </select>
+            </div>
+        </div>
+
+        <div class="single-line-text-input margin-bottom" id="start-date-area">
+            <label>Start date</label>
+            <input id="start-date" type="text"></input>
+        </div>
+
+        <div class="single-line-text-input margin-bottom" id="end-date-area">
+            <label>End date</label>
+            <input id="end-date" type="text"></input>
+        </div>
+
+        <div class="dropdown margin-bottom">
+            <label>Member Field</label>
+            <div class="wrapper">
+                <select id="member-field">
+                    <option value="System.AssignedTo">Assigned To</option>
+                    <option value="System.ChangedBy">Changed By</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="dropdown margin-bottom">
+            <label>Work Field</label>
+            <div class="wrapper">
+                <select id="work-field">
+                    <option value="Microsoft.VSTS.Scheduling.CompletedWork">Completed Work</option>
+                    <option value="Microsoft.VSTS.Scheduling.RemainingWork">Remaining Work</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

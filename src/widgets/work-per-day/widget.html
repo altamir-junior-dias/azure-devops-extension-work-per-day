@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="vss-init-index.js"></script>
+    <script type="text/javascript">
+        initializeWidget('WorkPerDay', 'widgets-work-per-day-widget');
+    </script>
+    <style>
+        div.chart { float: left; width: 100%; height: calc(100% - 51px); }
+        div.title { display: inline-block; width: 59%; }
+        div.title-area { width: 100%; display: inline-flex; }
+    </style>
+</head>
+<body>
+    <div class="widget" id="widget-body">
+        <div class="title-area" id="title-area">
+            <div class="title">
+                <div class="inner-title" id="title">Work per day</div>
+                <div class="subtitle" id="sub-title"></div>
+            </div>
+        </div>
+        <div id="chart">
+        </div>
+    </div>
+</body>
+</html>
