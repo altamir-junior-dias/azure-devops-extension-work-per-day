@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "WorkPerDayExtension",
     "publisher": "AltamirJuniorDias",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "name": "Work Per Day",
     "description": "Work Per Day",
     "public": true,

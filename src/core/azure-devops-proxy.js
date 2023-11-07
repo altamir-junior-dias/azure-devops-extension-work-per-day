@@ -346,11 +346,11 @@
             return deferred.promise();
         },
         
-        getIteration: (iteration) => {
+        getIteration: (iteration, team) => {
             var deferred = $.Deferred();
     
             var webContext = VSS.getWebContext();
-            var teamContext = { projectId: webContext.project.id, teamId: webContext.team.id, project: "", team: "" };
+            var teamContext = { projectId: webContext.project.id, teamId: team ?? webContext.team.id, project: "", team: "" };
     
             tfsWebAPIClient.getTeamIteration(teamContext, iteration).then(data => {
                 deferred.resolve({ 
@@ -394,7 +394,7 @@
             window.AzureDevOpsProxy.getTeamAreas(teamId).then(areas => {
                 var areasFilter = areas.map(area => '[System.AreaPath]' + (area.includeChildren ? ' under ' : ' = ') + '\'' + area.value + '\'').join(' OR ');
 
-                window.AzureDevOpsProxy.getIteration(iterationId).then(iteration => {
+                window.AzureDevOpsProxy.getIteration(iterationId, teamId).then(iteration => {
                     var query = 
                         'SELECT [System.Id], [System.Title] ' + 
                         'FROM WorkItems ' + 
